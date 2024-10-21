@@ -1,7 +1,6 @@
-#include <stdio.h> /*bibliothèque standard*/
-
-int main(void) /*point d'entrée*/
+#include <stdio.h> /* bibliothèque standard */
+int main(void) /* point d'entrée */
 {
-	    printf("with proper grammar, but the outcome is a piece of art,");
+printf("with proper grammar, but the outcome is a piece of art,\n");
 return (0);
 }
