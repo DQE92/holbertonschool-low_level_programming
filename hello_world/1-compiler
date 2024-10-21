@@ -1,2 +1,2 @@
 #!/bin/bash
-export "$file"=main.c | gcc -co $file
+gcc -co $CFILE
