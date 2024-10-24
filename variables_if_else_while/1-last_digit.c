@@ -2,6 +2,11 @@
 #include <stdio.h>
 #include <time.h>
 
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
@@ -27,7 +32,6 @@ else if (LastDigit < 6 && LastDigit != 0)
 {
 printf("and is less than 6 and not 0\n");
 }
-/*met fin a la tache*/
 return (0);
 }
 
