@@ -1,20 +1,19 @@
 #include <stdio.h>
 
 /**
- *main - Entry point
+ * main - Entry point
  *
- *Return: Always 0 (Success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
 int i;
 
-for (i = 1; i <= 10; i++)
+for (i = 0; i < 10; i++)
 {
-printf("%d ", i);
+putchar(i + '0');
 }
-printf("\n");
+putchar('\n');
 
 return (0);
-
 }
