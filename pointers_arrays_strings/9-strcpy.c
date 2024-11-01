@@ -1,19 +1,21 @@
 #include <stdio.h>
-#include "main.h"
 #include <string.h>
+#include "main.h"
 
-
-
-char *_strcpy(char *dest, char *src) {
-    char *original_dest = dest; // Save the original pointer to return later
-
-    // Copy each character from src to dest, including the null terminator
-    while (*src != '\0') {
-        *dest = *src;
-        dest++;
-        src++;
+char *_strcpy(char *dest, char *src)
+{
+    int i = 0;
+/**
+ * @while - copie chaque caractère vers dest
+ * ensuite ajoute le caractère null a fin de dest
+ * return - retourne le pointeur vers dest
+ */
+    while (src[i] !='\0')
+    {
+        dest[i] = src[i];
+        i++;
     }
-    *dest = '\0'; // Add the null terminator at the end of dest
+    dest[i] = '\0';
 
-    return original_dest; // Return the original destination pointer
+    return dest;
 }
