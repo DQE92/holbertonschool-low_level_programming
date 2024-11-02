@@ -1,10 +1,11 @@
 #include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  * print_array - print an array of integers
- * @a: an array of integers
- * @n: the number of elements to swap
+ * a: an array of integers
+ * n: the number of elements to swap
  *
  * Return: nothing.
  */
