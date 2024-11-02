@@ -3,8 +3,8 @@
 
 /**
  * _strcat - Concatène deux chaînes de caractères.
- * @dest: Chaîne de destination à laquelle src sera ajoutée.
- * @src: Chaîne source à ajouter à dest.
+ * dest: Chaîne de destination à laquelle src sera ajoutée.
+ * src: Chaîne source à ajouter à dest.
  *
  * Return: Pointeur vers la chaîne résultante dest.
  */
