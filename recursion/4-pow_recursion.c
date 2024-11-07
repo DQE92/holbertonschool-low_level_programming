@@ -10,8 +10,8 @@
 int _pow_recursion(int x, int y)
 {
     if (y < 0)
-        return -1; // Retourne -1 si l'exposant est négatif
+        return -1; 
     if (y == 0)
-        return 1; // Toute valeur élevée à la puissance 0 est 1
-    return x * _pow_recursion(x, y - 1); // Calcul récursif pour x^y
+        return 1; 
+    return x * _pow_recursion(x, y - 1); 
 }
