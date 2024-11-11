@@ -4,7 +4,7 @@
 *2- verifie si la taille est 0 donc return null
 *3- alloue la mémoire
 *4- initialise chaque élément avec 'c'
-*5- retourne le pointeur vers tableay
+*5- retourne le pointeur vers tableau
 */
 char *create_array(unsigned int size, char c) 
 {
@@ -17,7 +17,8 @@ return NULL;
 }
 
 array = (char *)malloc(size * sizeof(char));
-if (array == NULL) {
+if (array == NULL) 
+{
 return NULL;
 }
 
