@@ -1,44 +1,81 @@
 #include "dog.h"
-/*
-*malloc(sizeof(dog_t)) - Alloue l’espace pour la structure.
-*Si cela échoue, la fonction retourne NULL.
-*
-*malloc(strlen(name) + 1) - Alloue l’espace pour copier name.
-*strcpy - Copie le contenu de la chaîne, répétez pour owner.
-*
-* Si l’une des allocations échoue, libérez les ressources déjà allouées.
-*
-*return - retour pointeur
+#include <stdlib.h>
+
+
+/**
+*_strlen - returns length of
+*a string
+*@str: string to be counted
+*Return: returns length of string
+*/
+int _strlen(char *str)
+{
+int len = 0;
+while (str)
+len++;
+
+return (len);
+}
+
+
+/**
+*_strcopy - copy string pointed by src
+*into dest variable
+*@dest:buffer storing string copy
+*@src: buffer storing string to copy
+*Return:returns copied string
+*/
+char *_strcopy(char *dest, char *src)
+{
+int index = 0;
+
+for (; src[index] ; index++)
+dest[index] = src[index];
+
+dest[index] = '\0';
+return (dest);
+}
+
+
+
+
+/**
+*new_dog - creates a new dog
+*@name: name of new dog
+*@age: age of new dog
+*@owner: owner of new dog
+*Return: returns NULL in case
+*of failure
 */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-char *ocp, *ncp;
-dog_t *new_dog;
+dog_t *doggo;
 
-new_dog = malloc(sizeof(dog_t));
-if (new_dog == NULL)
+if (name == NULL || age < 0 || owner == NULL)
 return (NULL);
 
-ncp = malloc(strlen(name) + 1);
-if (ncp == NULL)
-{
-free(new_dog);
-return(NULL);
-}
-strcpy(ncp, name);
+doggo = malloc(sizeof(dog_t));
+if (doggo == NULL)
+return (NULL);
 
-ocp = malloc(sizeof(owner) + 1);
-if (ocp == NULL)
+doggo->name = malloc(sizeof(char) * (_strlen(name) + 1));
+if (doggo->name == NULL)
 {
-free(ncp);
-free(new_dog);
+free(doggo);
 return (NULL);
 }
-strcpy(ocp, owner);
 
-new_dog->name = ncp;
-new_dog->age = age;
-new_dog->owner = ocp;
+doggo->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+if (doggo->owner == NULL)
+{
+free(doggo->name);
+free(doggo);
+return (NULL);
+}
 
-return(new_dog);
+doggo->name = _strcopy(doggo->name, name);
+doggo->age = age;
+doggo->owner = _strcopy(doggo->owner, owner);
+
+return (doggo);
 }
