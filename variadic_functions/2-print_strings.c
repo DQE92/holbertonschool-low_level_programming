@@ -1,5 +1,4 @@
 #include "variadic_functions.h"
-void print_strings(const char *separator, const unsigned int n, ...)
 /**
  * print_strings - Prints strings followed by a new line.
  * @separator: The string to be printed between the strings.
